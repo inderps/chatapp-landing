@@ -34,11 +34,13 @@
               <h1>Chat with your website visitors</h1>
               <h3>Add <span class="highlight">live chat software</span> to your website and get their queries directly on your <span class="highlight">MOBILE PHONE</span> in real time.</h3>
               <p>
-              <form class="form-inline">
+              <form class="form-inline" action="https://landing-page-api.herokuapp.com/signup" method="post">
                 <div class="form-group">
-                  <input type="email" class="form-control input-lg" id="email" placeholder="Email">
+                  <input type="email" required="required" class="form-control input-lg" id="data" name="data" placeholder="Email">
+                  <input type="hidden" name="ipAddress" class="ipAddress"/>
+                  <input type="hidden" name="redirectUrl" value="http://querply.com?signedup=1"/>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg">Request for Demo</button>
+                <button type="submit" class="btn btn-primary btn-lg demo-btn">Request for Demo</button>
               </form>
               </p>
             </div>
@@ -85,10 +87,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <form class="form-inline big-form">
+          <form class="form-inline big-form" action="https://landing-page-api.herokuapp.com/signup" method="post">
             <h1>Request now for 30 Days free Trials</h1>
             <div class="form-group">
-              <input type="email" class="form-control input-lg" id="email" placeholder="Email">
+              <input type="email" required="required" class="form-control input-lg" id="data" name="data" placeholder="Email">
+              <input class="ipAddress" type="hidden" name="ipAddress"/>
+              <input type="hidden" name="redirectUrl" value="http://querply.com?signedup=1"/>
             </div>
             <button type="submit" class="btn btn-primary btn-lg demo-btn">Request for Demo</button>
           </form>
@@ -119,6 +123,24 @@
         <p class="navbar-text navbar-right"><a href="querply.com" class="navbar-link">querply.com</a></p>
       </div>
     </nav>
+    <div id="hidden_div" style="display: none"></div>
+
+    <div class="modal fade" id="thankyou">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Thank you</h4>
+          </div>
+          <div class="modal-body">
+            <p>Thanks a lot for showing interest. We will be sending you your credential details in few days. Keep in touch :-)</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
