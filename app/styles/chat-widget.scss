@@ -4,6 +4,7 @@
   }
   .panel{
     margin-bottom: 0px;
+    border: 0;
   }
   .chat-window{
     bottom:0;
@@ -129,4 +130,9 @@
   .top-bar {
     background-color: #E23764;
   }
+
+  .btn:hover {
+    background-color: #E23764;
+  }
+
 }
