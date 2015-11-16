@@ -7,4 +7,14 @@ $(document).ready(function(){
   if (window.location.search.indexOf('signedup') != -1) {
     $('#thankyou').modal();
   }
+
+  var scene = 1;
+
+  setInterval(function(){
+    if (scene < 9) {
+      $('.scene-' + scene).show();
+      scene = scene + 1;
+    }
+  }, 1500);
+
 });
